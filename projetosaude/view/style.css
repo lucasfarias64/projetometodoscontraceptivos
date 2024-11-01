@@ -1,0 +1,262 @@
+/* Reset  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* Estilo do corpo */
+body {
+    font-family: R, sans-serif;
+    font-size: 0,9375rem ;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar .nav-list {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.navbar .nav-list li {
+    list-style: none;
+    margin: 15px 0;
+}
+
+.navbar .nav-list li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Ativar menu */
+.navbar.active .nav-list {
+    display: flex;
+}
+
+/* Cabeçalho */
+.header {
+    background: linear-gradient(135deg, #f8b6e8, #a7ccf1);
+    /* Gradiente suave em azul */
+    color: #ffffff;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    z-index: 1050;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* Texto branco para contraste */
+    /* padding: 20px 20px; */
+    /* Aumenta o espaço interno para dar destaque */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra para efeito de elevação */
+}
+
+.header h1 {
+    font-size: 1.5em;
+    /* Tamanho maior para o título */
+    font-weight: bold;
+    /* Destaca o título */
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Sombra para destacar o texto */
+}
+
+header p {
+    font-size: 1.2em;
+    /* Tamanho maior para o subtítulo */
+    margin-top: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: #f0f8ff;
+}
+
+/* Seções */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 0px;
+    color: #333;
+}
+
+section#tipos {
+    background-color: #d0e7ff;
+    margin-bottom: 0px;
+    /* Azul claro */
+}
+p{
+    text-align: justify;
+}
+
+section#introducao{
+    text-align: center;
+}
+
+section#tipos h2{
+    text-align: center;
+}
+
+.divimagem {
+    padding: 0;
+    width: 100%;
+    height: 500px;
+    display: block;
+}
+
+.imagem {
+    background-image: url(../resource/img/imghorizont.jpg);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center bottom;
+    /* background-repeat: no-repeat; */
+}
+
+.imagembot{
+    background-image: url(../resource/img/guideline.png);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    overflow: hidden;
+    margin-top: 0px;
+    background-size:contain;
+    background-repeat:repeat-x;
+}
+.imagemguide {
+    padding: 0;
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+
+
+section#camisinha {
+    background-color: #ffd6e7;
+    /* Rosa claro */
+}
+.citacao{
+    padding: 20px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+section#naturais {
+    background-color: #d9f6ce;
+    margin-bottom: 0;
+    /* Verde claro */
+}
+
+section#permanentes {
+    background-color: #f3e4ff;
+    /* Roxo claro */
+}
+section#barreira {
+    background-color: #d0e7ff;
+    /* Rosa claro */
+}
+
+/* Títulos das seções */
+section h2 {
+    justify-items: center;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.image-grid {
+    width: 100%;
+    display: grid;
+    margin-top: 65px;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+.image-grid  img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.image-grid a{
+    list-style: none;
+    background-color: #333;
+}
+
+
+.image-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+ #footer{
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    color: #666;
+    border-top: 1px solid #ccc;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 720px) {
+    .navbar .nav-list {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        padding: 0;
+        border-top: none;
+    }
+
+    .navbar .nav-list li {
+        margin: 0 10px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .image-grid {
+        height: 100%;
+    }
+    p{
+        padding: 8px;
+        text-align: justify;
+    }
+
+    section {
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+    .imagem {
+        background-position: center center;
+        background-size: cover;
+    }
+}
